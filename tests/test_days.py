@@ -18,5 +18,8 @@ def test_single_day(day):
     solution = day_module.Solution()
     assert (solution.first_solution() == solution.first_answer())
     assert (solution.second_solution() == solution.second_answer())
+    # also check that we don't return None for both
+    assert (solution.first_answer() is not None)
+    assert (solution.second_answer() is not None)
 # create class
 # tests first and second solution

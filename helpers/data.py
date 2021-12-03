@@ -31,7 +31,7 @@ class DataLoader:
             print(f"Data for day {self.day} is already downloaded")
 
     def load_data(self, data_type='int'):
-        return np.loadtxt(self.input_file, dtype=data_type)
+        return np.genfromtxt(self.input_file, dtype=data_type, encoding=None)
 
 if __name__ == "__main__":
     dataloader = DataLoader()
