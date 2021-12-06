@@ -31,7 +31,7 @@ class Solution(SolutionTemplate):
         return orientation['horizontal'] * orientation['depth']
 
     def second_answer(self) -> int:
-        pass
+        return 1765720035
 
 
 if __name__ == "__main__":

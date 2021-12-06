@@ -30,8 +30,10 @@ class DataLoader:
         else:
             print(f"Data for day {self.day} is already downloaded")
 
-    def load_data(self, data_type='int'):
-        return np.genfromtxt(self.input_file, dtype=data_type, encoding=None)
+    def load_data(self, data_type='int', kwargs=None):
+        if kwargs is None:
+            kwargs = {}
+        return np.genfromtxt(self.input_file, dtype=data_type, encoding=None, **kwargs)
 
 if __name__ == "__main__":
     dataloader = DataLoader()
