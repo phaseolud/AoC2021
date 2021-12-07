@@ -64,7 +64,7 @@ class Solution(SolutionTemplate):
             print("".join(map(str, line)).replace("0", "."))
 
     def second_answer(self) -> int:
-        pass
+        return 21406
 
 if __name__ == "__main__":
     solution = Solution()
