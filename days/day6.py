@@ -12,7 +12,7 @@ class Solution(SolutionTemplate):
 
     def first_solution(self) -> int:
         fish_list = np.copy(self.data)
-        for day in range(18):
+        for day in range(80):
             fish_list -= 1
             n_new_fish = (fish_list == -1).sum()
             fish_list[fish_list == -1] = 6
@@ -35,7 +35,7 @@ class Solution(SolutionTemplate):
         return fish_day_to_repr.sum()
 
     def second_answer(self) -> int:
-        pass
+        return 1754597645339
 
 
 if __name__ == "__main__":
