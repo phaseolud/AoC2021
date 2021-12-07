@@ -3,6 +3,7 @@ import requests
 from definitions import ROOT_DIR, SESSION
 import numpy as np
 
+
 class DataLoader:
     """
     Loads the data from the AoC website into the input_data folder
@@ -16,6 +17,7 @@ class DataLoader:
         self.day = day
 
         self.input_file = self.input_data_folder / f"input_{self.day}.txt"
+        self.debug_file = self.input_data_folder / f"debug_{self.day}.txt"
         self.url = f"https://adventofcode.com/2021/day/{day}/input"
 
     def download_data(self) -> None:
@@ -30,10 +32,13 @@ class DataLoader:
         else:
             print(f"Data for day {self.day} is already downloaded")
 
-    def load_data(self, data_type='int', kwargs=None):
+    def load_data(self, data_type='int', debug=False, kwargs=None):
         if kwargs is None:
             kwargs = {}
+        if debug:
+            return np.genfromtxt(self.debug_file, dtype=data_type, encoding=None, **kwargs)
         return np.genfromtxt(self.input_file, dtype=data_type, encoding=None, **kwargs)
+
 
 if __name__ == "__main__":
     dataloader = DataLoader()
