@@ -8,7 +8,7 @@ class Solution(SolutionTemplate):
 
     def __init__(self):
         dataloader = DataLoader(7)
-        self.data = dataloader.load_data(data_type='int', kwargs={"delimiter": ','})
+        self.data = dataloader.load_data(data_type='int', delimiter= ',')
 
     def first_solution(self) -> int:
         max_pos = np.max(self.data)

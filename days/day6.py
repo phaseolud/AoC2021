@@ -8,7 +8,7 @@ class Solution(SolutionTemplate):
 
     def __init__(self):
         dataloader = DataLoader(6)
-        self.data = dataloader.load_data(data_type='int', kwargs={'delimiter': ','})
+        self.data = dataloader.load_data(data_type='int', delimiter=",")
 
     def first_solution(self) -> int:
         fish_list = np.copy(self.data)

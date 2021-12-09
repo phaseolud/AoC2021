@@ -8,7 +8,7 @@ class Solution(SolutionTemplate):
 
     def __init__(self):
         dataloader = DataLoader(3)
-        self.data = dataloader.load_data(data_type='int', kwargs={'delimiter': 1})
+        self.data = dataloader.load_data(data_type='int', delimiter=1)
 
     def first_solution(self) -> int:
         n_numbers = len(self.data)

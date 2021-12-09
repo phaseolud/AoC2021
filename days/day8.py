@@ -61,7 +61,7 @@ class Solution(SolutionTemplate):
         return "".join(set.symmetric_difference(set(str1), set(str2)))
 
     def second_answer(self) -> int:
-        pass
+        return 1012089
 
 
 if __name__ == "__main__":
