@@ -59,7 +59,7 @@ class Solution(SolutionTemplate):
         return sorted(additional_bracket_points_list)[len(additional_bracket_points_list) // 2]
 
     def second_answer(self) -> int:
-        pass
+        return 1870887234
 
 
 if __name__ == "__main__":
