@@ -6,6 +6,7 @@ import re
 from collections import Counter
 import sys
 
+
 class Solution(SolutionTemplate):
 
     def __init__(self):
@@ -30,7 +31,7 @@ class Solution(SolutionTemplate):
     def insert_pairs(self, template) -> str:
         new_string = ""
         for i in range(len(template) - 1):
-            new_string += self.pair_map_insert[template[i:i+2]][0:2]
+            new_string += self.pair_map_insert[template[i:i + 2]][0:2]
         return new_string + template[-1]
 
     def first_answer(self) -> int:
@@ -40,7 +41,7 @@ class Solution(SolutionTemplate):
         # create initial count of pairs in the template
         pair_map_count = dict.fromkeys(self.pair_map.keys(), 0)
         for i in range(len(self.template) - 1):
-            pair_map_count[self.template[i:i+2]] += 1
+            pair_map_count[self.template[i:i + 2]] += 1
 
         for i in range(40):
             pair_map_count_old = pair_map_count.copy()
@@ -63,9 +64,6 @@ class Solution(SolutionTemplate):
         element_count[self.template[-1]] += 1
         ordered = element_count.most_common()
         return ordered[0][1] - ordered[-1][1]
-
-
-
 
     def second_answer(self) -> int:
         return 4807056953866
