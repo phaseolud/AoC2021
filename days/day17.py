@@ -14,7 +14,7 @@ class Solution(SolutionTemplate):
         self.x_target_r = range(x_target_l[0], x_target_l[1] + 1)
         self.y_target_r = range(y_target_l[0], y_target_l[1] + 1)
 
-        self.sign = lambda x: x and (1, -1)[x < 0]
+        self.sign = lambda x: x and (1, -1)[int(x < 0)]
 
         self.vy_possible = []
         self.vx_possible = []
